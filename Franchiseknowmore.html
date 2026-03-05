@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/HealthCRAD-Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="output.css">
+  <title>HealthCRAD Wholesale | Franchise Know More</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #f9fafb;
+    }
+
+    .franchise-section {
+      padding: 60px 8%;
+      background-color: #fff;
+      text-align: center;
+    }
+
+    .franchise-title {
+      font-size: 2.4rem;
+      color: #13C7EB;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .franchise-desc {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 750px;
+      margin: 0 auto 60px;
+
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .feature-card {
+      background: #eafbff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card img {
+      width: 60px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h4 {
+      font-size: 1.5rem;
+      color: #13C7EB;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: #444;
+    }
+
+    .know-more-btn {
+      padding: 14px 36px;
+      background-color: #13C7EB;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .know-more-btn:hover {
+      background-color: #2F52AE;
+    }
+
+    .more-info-wrapper {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.8s ease;
+      margin-top: 30px;
+    }
+
+    .more-info {
+      background: #f7fefc;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: left;
+    }
+
+    .more-info h3 {
+      color: #13C7EB;
+      margin-bottom: 20px;
+    }
+
+    .more-info p {
+      color: #444;
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+
+    .more-info img {
+      max-width: 70%;
+      border-radius: 30px;
+      margin: 25px 0;
+    }
+
+    .testimonial {
+      font-style: italic;
+      background: #e9fbff;
+      padding: 20px;
+      border-left: 4px solid #13C7EB;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+
+    .form-container {
+      background: #ffffff;
+      margin-top: 30px;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .form-container h3 {
+      margin-bottom: 20px;
+      color: #13C7EB;
+    }
+
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input,
+    textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #007c3f;
+      color: white;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #2F52AE;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    .bounce-icon {
+      animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .submit-btn:hover {
+      background-color: #00592b;
+    }
+
+    @media (max-width: 768px) {
+      .more-info {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="franchise-section">
+    <h2 class="franchise-title">Partner With Us – Franchise Opportunity</h2>
+    <p class="franchise-desc">
+      Join India’s fastest-growing digital pharma network and turn your pharmacy dream into a profitable reality.
+      Revolutionize pharmacy retail in your city. 
+      With our tech, support, and discounts behind you, there’s no limit to your growth.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/833/833272.png" alt="Investment">
+        <h4 class="font-semibold">Low Investment</h4>
+        <p>Launch your pharmacy with minimal capital and maximum income potential.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" alt="Support">
+        <h4 class="font-semibold">Full Support</h4>
+        <p> From onboarding to everyday help, we’re with you at every step.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3580/3580411.png" alt="Marketing">
+        <h4 class="font-semibold">Marketing Help</h4>
+        <p>Get branding, local ads, posters and maximum discounts to make your outlet the go-to destination.</p>
+      </div>
+      <div class="feature-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Rights">
+        <h4 class="font-semibold">Territorial Rights</h4>
+        <p>Enjoy zero competition zones with exclusive franchise area rights.</p>
+      </div>
+    </div>
+
+    <button class="know-more-btn" onclick="toggleMore()">Show More</button>
+
+    <div class="more-info-wrapper" id="moreInfoWrapper">
+      <div class="more-info">
+        <h3 class="text-2xl font-semibold">What’s Included in Your Franchise</h3>
+        <p>✅ <span class="text-medium font-medium text-black"> Exclusive Product Access:</span>
+          Enjoy massive discounts on medicines, surgicals, and healthcare essentials — delivered quickly and reliably.
+          </p>
+          <p>✅ <span class="text-medium font-medium text-black"> Medicine-on-EMI Facility: </span>
+            Boost your inventory and procurement capacity with flexible EMI options — no more financial crunches.
+            </p>
+            <p>✅ <span class="text-medium font-medium text-black"> Team Training & Skill Building:</span>
+              Get professional onboarding and regular training for sales, service, and operations — tailored for pharmacy success.
+              </p>
+              <p>✅ <span class="text-medium font-medium text-black">  Online Medicine Orders for Patients:</span>
+                Expand your reach with doorstep delivery of medicines through HealthCRAD patients App.
+                </p>
+                <p>✅ <span class="text-medium font-medium text-black"> Performance & Growth Support:</span>
+                  Monthly strategy calls, personalized business reviews, and insights to help you grow faster and smarter.
+                  </p>
+                  <p>✅ <span class="text-medium font-medium text-black"> Marketing & Advertising Help:</span>
+                    We boost your local presence with posters, digital promotions, and branding support — both online and offline.
+                    </p>
+                    <p>✅ <span class="text-medium font-medium text-black">  Exclusive Franchise Rights:</span>
+                      Enjoy protected territory zones — no overlap, no competition from other HealthCRAD stores nearby.
+                      </p>
+                        <p>✅ <span class="text-medium font-medium text-black">  24/7 Partner Supports:</span>
+                          We’re always just a call or click away — with real humans helping real businesses.
+                          </p>
+        
+
+        <!-- <img src="img/Illustrator Franchise.png" class="width-50%"
+          alt="Franchise Management"> -->
+
+        <h3 class="text-2xl font-semibold mt-10">👥 Who can apply?</h3>
+        <p>✅ <span class="text-medium font-medium text-black">  Passionate Individuals & Entrepreneurs:</span>
+          Whether you're a fresh entrepreneur or someone with a business mindset — if you dream of owning a pharmacy, we’ll help you build it.
+          </p>
+          <p>✅ <span class="text-medium font-medium text-black">  Registered Pharmacists or Healthcare Professionals:</span>
+            Use your expertise to step into the future of pharmacy with full digital support and operational ease.
+            </p>
+          <p>✅ <span class="text-medium font-medium text-black">  Existing Pharmacy Owners:</span>
+            Already running a store? Transform it into a digitally advanced HealthCRAD Franchise with better pricing, tech, and patient reach.
+            </p>
+            <p>✅ <span class="text-medium font-medium text-black">  People with Prior Healthcare/Retail Experience:</span>
+              Have experience in pharma, sales, distribution, or retail? It’s time to scale it into something bigger and more impactful.
+              </p>
+              <p>✅ <span class="text-medium font-medium text-black">  Minimum Investment, Maximum Potential:</span>
+                Start with an investment based on your city/tier — we keep it flexible and pocket-friendly.
+                </p>
+
+                <p>💡<span class="font-bold">Bonus Fit </span> <br>
+                  ✅ If you're looking for a future-proof business <br>
+                  
+                  ✅ If you believe in tech-powered healthcare <br>
+                  
+                  ✅ If you're excited by earning more while serving better <br>
+                  
+                  👉 Then yes, you’re the perfect fit for the HealthCRAD Franchise Family</p>
+
+        <h3 class="text-2xl font-semibold mt-10">What Our Partners Say</h3>
+        <div class="testimonial">
+          “Joining this franchise helped me scale faster than I ever imagined. Within 3 months, I doubled my reach and
+          now handle over 100 clients.”
+          <br>— Ravi Kumar, Franchise Owner 
+        </div>
+
+        <img src="img/Illustrator Franchise.png"
+          alt="Franchise Team">
+
+        <!-- <div class="form-container">
+          <h3>Apply for Franchise</h3>
+          <form onsubmit="submitFranchise(event)">
+            <input type="text" placeholder="Your Full Name" required />
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" required />
+            <input type="text" placeholder="City / Location" required />
+            <textarea placeholder="Tell us about your interest..." required></textarea>
+            <button type="submit" class="submit-btn">Submit Inquiry</button>
+          </form>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917779888289" class="whatsapp-float bounce-icon"
+    target="_blank">
+    💬 Enquiry Now
+  </a>
+
+  <script>
+    let expanded = false;
+    function toggleMore() {
+      const wrapper = document.getElementById('moreInfoWrapper');
+      const btn = document.querySelector('.know-more-btn');
+      if (!expanded) {
+        wrapper.style.maxHeight = wrapper.scrollHeight + "px";
+        btn.textContent = "Show Less";
+      } else {
+        wrapper.style.maxHeight = "0";
+        btn.textContent = "Show More";
+      }
+      expanded = !expanded;
+    }
+
+    function submitFranchise(event) {
+      event.preventDefault();
+      alert("Thank you! Your franchise inquiry has been submitted.");
+      event.target.reset();
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why choose HealthCRAD Wholesale</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'poppins', sans-serif;
+            background-color: #0b132b;
+            overflow-x: hidden;
+        }
+
+        .hero-bg {
+            background: linear-gradient(to bottom, #101935, #0b132b);
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: #4f46e5;
+            box-shadow: 0 0 20px rgba(79, 70, 229, 0.5);
+        }
+
+        .glowing-icon {
+            filter: drop-shadow(0 0 8px #4f46e5);
+        }
+
+        /* New animated gradient background */
+        .animated-blob {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #1e3a8a, #4f46e5);
+            animation: animate-blob 10s infinite alternate-reverse;
+            filter: blur(150px);
+            opacity: 0.5;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        @keyframes animate-blob {
+            0% {
+                transform: scale(1) translate(0, 0);
+            }
+
+            50% {
+                transform: scale(1.2) translate(100px, 50px);
+            }
+
+            100% {
+                transform: scale(1) translate(0, 0);
+            }
+        }
+
+        /* Pulsing button effect */
+        .button-pulse {
+            animation: pulse-ring 1.5s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-white">
+
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-screen flex items-center justify-center p-6 relative overflow-hidden">
+        <div class="animated-blob top-1/2 left-1/4"></div>
+        <div class="text-center max-w-4xl mx-auto z-10">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 leading-tight">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#10adb5]">HealthCRAD
+                    Wholesale :</span> Smart procurement, Simplified.
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 max-w-6xl mx-auto mb-8">
+                AI-enabled platform for seamless ordering, tracking, and insights, all from a single app.
+                Empower your business with massive product variety, Great offers, flexible payment options and Star
+                Retailer Program.
+            </p>
+            <div class="relative inline-block">
+                <div class="absolute inset-0 bg-[#10adb5] rounded-full button-pulse"></div>
+                <a href="#features"
+                    class="relative bg-white text-[#10adb5] font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    Explore Features
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 bg-gray-900">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Powerful Features for Your Samrt Retail</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- AI-Enabled Platform -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-blue-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                            <path d="M12 8v4l3 3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">AI-Enabled Platform</h3>
+                    <p class="text-gray-400">Smart ordering, tracking, and insights at your fingertips.</p>
+                </div>
+                <!-- Massive Product Variety -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-purple-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect>
+                            <path d="M16 16l-4-4-4 4"></path>
+                            <path d="M12 12l0 8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Massive Product Variety</h3>
+                    <p class="text-gray-400">A wide range of medicines & healthcare products, all under one roof.</p>
+                </div>
+                <!-- MED on EMI -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-pink-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
+                            <path d="M12 18v-6h-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">MED on EMI</h3>
+                    <p class="text-gray-400">Purchase Medicines on Easy Monthly Instalments (EMI).</p>
+                </div>
+                <!-- Flexible Payment Options -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-yellow-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Flexible Payments</h3>
+                    <p class="text-gray-400">Multiple modes for retailer convenience.</p>
+                </div>
+                <!-- Non-Stop Stock Availability -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-green-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Non-Stop Stock Availability</h3>
+                    <p class="text-gray-400">Orders fulfilled reliably, no matter when you need them.</p>
+                </div>
+                <!-- 24x7 Support -->
+                <div class="feature-card p-6 rounded-xl shadow-lg flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center mb-4">
+                        <svg class="w-12 h-12 text-cyan-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2 2A15.42 15.42 0 014 4a2 2 0 012-2h3l2 5a1 1 0 01-1 1h-1a11.4 11.4 0 0010 10h1a1 1 0 011 1l5 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Customer Support</h3>
+                    <p class="text-gray-400">Always available to empower and assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="values" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Why Choose Us?</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="value-card p-8 rounded-xl flex items-start space-x-6">
+                    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-blue-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v2h-2v-2zm0-4h2v2h-2v-2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Reliability & Trust</h3>
+                        <p class="text-gray-400">Our platform is built on a foundation of trust. We guarantee non-stop
+                            stock availability and timely order fulfillment.</p>
+                    </div>
+                </div>
+                <div class="value-card p-8 rounded-xl flex items-start space-x-6">
+                    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-purple-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v2h-2v-2zm0-4h2v2h-2v-2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Dedicated Partnership</h3>
+                        <p class="text-gray-400">We offer personalized assistance with a dedicated manager for bulk
+                            orders, ensuring your needs are always met.</p>
+                    </div>
+                </div>
+                <div class="value-card p-8 rounded-xl flex items-start space-x-6">
+                    <div class="w-12 h-12 flex items-center justify-center flex-shrink-0">
+                        <svg class="w-8 h-8 text-cyan-400 glowing-icon" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v2h-2v-2zm0-4h2v2h-2v-2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Unmatched Convenience</h3>
+                        <p class="text-gray-400">From flexible payments to simple bulk ordering, our platform is
+                            designed to make your business easier.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bulk Order Section -->
+    <section id="bulk-order" class="py-20 px-6">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-12">Bulk Order Made Simple</h2>
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="/img/upload.png" alt="Bulk Order Feature"
+                        class="rounded-xl shadow-lg transform hover:scale-105 transition-transform">
+                </div>
+                <div class="lg:w-1/2 space-y-6">
+                    <p class="text-lg md:text-xl text-gray-300">
+                        Our powerful bulk order feature is designed to streamline your business and maximize your
+                        profits. With just a few clicks, you can upload your list and let our system handle the rest.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4 p-4 rounded-xl feature-card">
+                            <span class="text-indigo-400 flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-200">Click “Bulk Order” feature on app</span>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl feature-card">
+                            <span class="text-indigo-400 flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-200">Upload handwritten or typed files (JPG, PNG, Excel, CSV)</span>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl feature-card">
+                            <span class="text-indigo-400 flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-200">Get extra discounts on bulk orders</span>
+                        </div>
+                        <div class="flex items-start space-x-4 p-4 rounded-xl feature-card">
+                            <span class="text-indigo-400 flex-shrink-0 mt-1">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+                                </svg>
+                            </span>
+                            <span class="text-gray-200">Dedicated manager exclusively for bulk order retailers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-900 py-12 px-6 text-center">
+        <div class="container mx-auto">
+            <h3 class="text-2xl font-bold mb-4">Have Questions? We're Here to Help.</h3>
+            <p class="text-gray-400 mb-6 max-w-xl mx-auto">Our support team is always available to empower and
+                assist you. Get in touch with us anytime.</p>
+            <a href="mailto:support@healthcrad.com"
+                class="bg-[#10adb5] text-white font-semibold py-3 px-8 rounded-full hover:bg-[#02585c] transition-colors">
+                Contact Support
+            </a>
+            <p class="text-gray-500 text-sm mt-8">&copy; 2025 HealthCRAD Wholesale | Bhavah Healthcare Pvt. Ltd. <br> All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

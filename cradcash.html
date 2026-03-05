@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know more about CRAD Cash </title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    <style>
+        :root {
+            --primary-bg: #8e2de2;
+            --secondary-bg: #28a1a7;
+            --light-text: #f0f4f8;
+            --dark-text: #333;
+            --accent-pink: #fff06e;
+            --accent-green: #66cc99;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            
+            /* Enhanced Gradient Colors */
+            --gradient-body-start: #20d7e0;
+            --gradient-body-end: #0a627a;
+            --gradient-btn-start: #ff4d94;
+            --gradient-btn-end: #ff6e7f;
+            --gradient-icon-start: #66cc99;
+            --gradient-icon-end: #28a745;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'poppins', sans-serif;
+            background: linear-gradient(135deg, var(--gradient-body-start), var(--gradient-body-end));
+            color: var(--light-text);
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* ----- HEADER SECTION ----- */
+        .header {
+            padding: 3rem 1.5rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--light-text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            color: var(--secondary-bg);
+            font-weight: 700;
+        }
+
+        .phonepe-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .help-icon {
+            font-size: 1.5rem;
+            color: var(--light-text);
+        }
+
+        .main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-pink);
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .sub-title {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 0.5rem 0 2rem;
+        }
+
+        .call-to-action {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: var(--light-text);
+            font-weight: 500;
+            transition: transform 0.2s ease;
+        }
+
+        .call-to-action:hover {
+            transform: translateX(5px);
+        }
+
+        /* ----- MAIN CONTENT ----- */
+        .main-content {
+            background-color: var(--card-bg);
+            color: var(--dark-text);
+            padding: 2rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .service-card {
+            background-color: #f8f8f8;
+            padding: 1rem;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 0.75rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, var(--gradient-icon-start), var(--gradient-icon-end));
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-size: 2rem;
+        }
+
+        .claim-section {
+            margin-top: 2rem;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .claim-flex {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .phone-mockup {
+            width: 250px;
+            border: 10px solid var(--dark-text);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .phone-mockup img {
+            width: 100%;
+            display: block;
+        }
+
+        .claim-steps {
+            list-style: none;
+            padding: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        .claim-steps li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .claim-steps li::before {
+            content: attr(data-step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: linear-gradient(45deg, var(--accent-pink), #ff4d94);
+            color: var(--light-text);
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ----- FOOTER ----- */
+        .footer {
+            background-color: var(--secondary-bg);
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: auto;
+            width: 100%;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.2);
+        }
+
+        .pay-now-btn {
+            background: linear-gradient(45deg, var(--gradient-btn-start), var(--gradient-btn-end));
+            color: var(--light-text);
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .pay-now-btn:hover {
+            background: linear-gradient(45deg, #ff4d94, #ff829b);
+        }
+
+        .legal-text {
+            font-size: 0.75rem;
+            opacity: 0.8;
+            margin-top: 1rem;
+            line-height: 1.4;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 600px) {
+            .claim-flex {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                text-align: left;
+            }
+            .claim-steps {
+                flex-grow: 1;
+                max-width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-top">
+                <div class="profile-icon">SM</div>
+                <div class="phonepe-logo">CRAD Cash</div>
+                <a href="cradcashpopup.html"><div class="help-icon"><i class="fas fa-question-circle"></i></div></a>
+            </div>
+            <h1 class="main-title">Cashback Fest</h1>
+            <p class="sub-title">Up to ₹300 on each successful order</p>
+            <a href="https://play.google.com/store/apps/details?id=com.healthcrad.wholesale" class="call-to-action">Claim now<i class="fas fa-arrow-right"></i></a>
+        </header>
+
+        <main class="main-content">
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-check-circle"></i></div>
+                    <span>Secure Payments</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-wallet"></i></div>
+                    <span>Smart Savings</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-star"></i></div>
+                    <span>Quick Rewards</span>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <span>Smart Spend</span>
+                </div>
+            </div>
+            <div class="claim-section">
+                <h2 class="section-title">Know more about your CRAD Cash?</h2>
+                <div class="claim-flex">
+                    <div class="phone-mockup">
+                        <img src="/img/App QR.png" alt="Phone screen showing rewards section">
+                    </div>
+                    <ul class="claim-steps">
+                        <li data-step="1">Earn CRAD Cash on every purchase</li>
+                        <li data-step="2">Redeem CRAD Cash on your next orders</li>
+                        <li data-step="3">The more you order, the more you save & earn!</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <a href="https://play.google.com/store/apps/details?id=com.healthcrad.wholesale" class="pay-now-btn">Shop Now</a>
+            <div class="legal-text">
+                <p>*T&C Apply</p>
+                <p>CRAD Cash is virtual money earned as rewards on every order. <br> CRAD Cash cannot be transferred to your bank account or other users.</p>
+            </div>
+        </footer>
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperCoin Zone</title>
+<style>
+  * {margin:0;padding:0;box-sizing:border-box;}
+ 
+</style>
+</head>
+<body>
+
+<div class="supercoin-zone">
+  <div class="zone-header">
+    <h2>SuperCoin Zone</h2>
+    <div class="coin-balance" id="coinCount">0</div>
+  </div>
+
+  <p class="banner-text">🎉 Get extra 5% off on EVERY purchase 🎉</p>
+  <h4 style="text-align:center;color:#111;margin-bottom:1rem;">You are missing on</h4>
+
+  <div class="offers">
+    <div class="offer-card">
+      <h3>5% Off</h3>
+      <p>Using SuperCoins<br>On Every Order</p>
+    </div>
+
+    <div class="offer-card">
+      <div class="offer-badge">Early Access is Live</div>
+      <h3>⚡ 1 = ₹2</h3>
+      <p>Discount Only for Today</p>
+    </div>
+
+    <div class="offer-card">
+      <h3>CashBack</h3>
+      <p>1–2% Up to ₹25<br>On Every Order</p>
+    </div>
+  </div>
+
+  <p class="bottom-text">
+    Shop Now & Become <span>✨ Plus Member</span>
+  </p>
+
+  <!-- Floating Rupees -->
+  <div class="rupee" style="left:10%;animation-delay:0s;">₹</div>
+  <div class="rupee" style="left:35%;animation-delay:2s;">₹</div>
+  <div class="rupee" style="left:60%;animation-delay:4s;">₹</div>
+  <div class="rupee" style="left:80%;animation-delay:1s;">₹</div>
+</div>
+
+<script>
+  // Auto-increment from 0 → 500 → reset → repeat
+  let coins = 0;
+  const coinDisplay = document.getElementById("coinCount");
+
+  function increaseCoins() {
+    coins += Math.floor(Math.random() * 5) + 1; // random 1–5 increase
+    if (coins > 500) {
+      coins = 0; // reset after 500
+    }
+    coinDisplay.textContent = coins;
+  }
+  setInterval(increaseCoins, 200); // update every 0.2 sec
+
+  // Restart floating ₹ animation
+  const rupees = document.querySelectorAll('.rupee');
+  setInterval(() => {
+    rupees.forEach(r => {
+      r.style.animation = "none";
+      void r.offsetWidth;
+      r.style.animation = "float 7s linear infinite";
+    });
+  }, 8000);
+</script>
+
+</body>
+</html>

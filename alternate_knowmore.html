@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alternate Brand Card - Full Width</title>
+    <style>
+        /* 1. Global Setup (Mobile-First) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            /* Removed body padding */
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Align to top to fill screen width easier */
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .card-container {
+            /* Now covers the full width of the screen on mobile */
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-radius: 0;
+            /* No border radius on the sides for full width */
+        }
+
+        /* 2. Header Styling (Mobile) */
+        .header-section {
+            background: linear-gradient(180deg, #00b0f0, #008ccf);
+            color: white;
+            text-align: center;
+            padding: 20px 10px 60px 10px;
+            position: relative;
+            /* Keep top border radius if you want rounded corners at the top of the screen */
+            border-radius: 0 0 0 0;
+        }
+
+        .header-section::after {
+            content: '';
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background-color: white;
+            border-radius: 0 0 50% 50% / 0 0 100% 100%;
+        }
+
+        h1 {
+            font-size: 1.1em;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 1.7em;
+            font-weight: 700;
+            margin: 5px 0 15px 0;
+        }
+
+        /* 3. Graphic Styling (Mobile) */
+        .shield-graphic {
+            position: relative;
+            /* The graphic area width is still 100% of the card/screen */
+            width: 100%;
+            height: 60px;
+        }
+
+        .shield-icon {
+            font-size: 2.5em;
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.8;
+        }
+
+        .star {
+            position: absolute;
+            font-size: 1em;
+            color: gold;
+            text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Mobile Star Positions (Still relative to the 100% width) */
+        .star-1 {
+            top: 20px;
+            left: 25%;
+        }
+
+        /* Adjusted to percentage for scaling */
+        .star-2 {
+            top: 5px;
+            left: 38%;
+        }
+
+        .star-3 {
+            top: 30px;
+            right: 25%;
+        }
+
+        .star-4 {
+            top: 10px;
+            right: 38%;
+        }
+
+
+        /* 4. Content Styling (Mobile) */
+        .content-section {
+            padding: 20px;
+            padding-top: 50px;
+            text-align: left;
+            color: #333;
+        }
+
+        .headline {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .body-text,
+        .call-to-action {
+            font-size: 1em;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            font-weight: bold;
+        }
+
+        .call-to-action strong {
+            font-weight: bold;
+        }
+
+        .example-link a {
+            color: #00b0f0;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* 5. Desktop and Tablet View (Media Query) */
+        @media (min-width: 600px) {
+            .card-container {
+                /* Use a high percentage for near full-width, or 100% for absolute full-width */
+                width: 90%;
+                max-width: 1200px;
+                /* Cap the width on extremely large screens */
+                margin: 20px auto;
+                /* Center the container on the screen */
+                border-radius: 10px;
+                /* Reintroduce rounded corners */
+            }
+
+            .header-section {
+                padding: 40px 20px 100px 20px;
+                /* Increased padding for banner look */
+                border-radius: 10px 10px 0 0;
+            }
+
+            .header-section::after {
+                bottom: -50px;
+                height: 100px;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 2.5em;
+            }
+
+            .shield-graphic {
+                height: 100px;
+            }
+
+            .shield-icon {
+                font-size: 4em;
+            }
+
+            .star {
+                font-size: 1.8em;
+            }
+
+            /* Desktop Star Positions (Wider spread using percentages) */
+            .star-1 {
+                top: 50px;
+                left: 35%;
+            }
+
+            .star-2 {
+                top: 20px;
+                left: 42%;
+            }
+
+            .star-3 {
+                top: 55px;
+                right: 35%;
+            }
+
+            .star-4 {
+                top: 30px;
+                right: 42%;
+            }
+
+
+            .content-section {
+                padding: 30px;
+                padding-top: 60px;
+            }
+
+            .headline {
+                font-size: 1.4em;
+            }
+
+            .body-text,
+            .call-to-action {
+                font-size: 1.1em;
+            }
+        }
+
+        /* Global Reset and Body Setup */
+        .med {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Outer Container for the whole comparison section */
+        .comparison-container {
+            width: 100%;
+            max-width: 650px;
+            /* Slight reduction for tighter look */
+        }
+
+        /* Header link style */
+        .view-example {
+            color: #00b0f0;
+            font-size: 1.1em;
+            margin-bottom: 25px;
+            /* Increased margin */
+            display: inline-block;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Card Wrapper (Flexbox for Layout) */
+        .cards-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+        }
+
+        /* Card Base Styles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            /* Slightly larger radius */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            flex: 1;
+            min-width: 0;
+        }
+
+        /* Header for each card */
+        .card-header {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            padding-bottom: 0;
+            /* Removed border bottom */
+        }
+
+        /* 1. "You searched" Card (Left) */
+        .card-searched {
+            border: 1px solid #ddd;
+        }
+
+        /* 2. "Alternate" Card (Right) */
+        .card-alternate {
+            background: linear-gradient(180deg, #00b0f0, #008ccf);
+            padding: 0;
+            color: white;
+            border: none;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-alternate .card-header {
+            color: white;
+            padding: 20px 20px 5px 20px;
+            /* Adjusted padding to place text higher */
+        }
+
+        .card-alternate .card-content {
+            background-color: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 0 0 12px 12px;
+        }
+
+        /* Image Styling */
+        .medicine-image {
+            width: 90%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            /* Light gray border around image */
+            margin: 0 auto 15px auto;
+            /* Centered */
+            box-sizing: border-box;
+            background-color: white;
+            /* Ensure background is white inside border */
+            border-radius: 3px;
+        }
+
+        .medicine-image img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Text Styles */
+        .product-name {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+
+        .manufacturer {
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .card-searched .manufacturer {
+            color: #585858;
+            /* Darker gray for subtle emphasis */
+            font-weight: 600;
+        }
+
+        .card-alternate .manufacturer {
+            color: #008ccf;
+            /* Primary blue color */
+            font-weight: 600;
+        }
+
+        .details {
+            font-size: 1em;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* Pricing Area */
+        .pricing-section {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+
+        .mrp {
+            color: #888;
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+
+        .mrp span {
+            text-decoration: line-through;
+            margin-left: 5px;
+        }
+
+        /* Specific Fix for the Alternate card pricing */
+        .card-alternate .mrp {
+            /* In the image, the ₹ symbol itself is NOT crossed out on the Alternate card */
+            text-decoration: none;
+        }
+
+        .discount {
+            font-weight: bold;
+            margin: 5px 0 10px 0;
+            font-size: 1.1em;
+        }
+
+        .discount {
+            color: #2ecc71;
+            /* Green discount */
+        }
+
+        .final-price {
+            font-weight: 800;
+            /* Extra bold */
+            font-size: 1.8em;
+            color: #333;
+        }
+
+        /* Badge Styling (100% Match) */
+        .badge {
+            position: absolute;
+            top: -35px;
+            /* Moved up to sit better between the cards */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 75px;
+            background-color: #e6f7ff;
+            /* Lighter blue background */
+            border-radius: 50%;
+            border: 2px solid #00b0f0;
+            color: #00b0f0;
+            text-align: center;
+            line-height: 1.1;
+            font-size: 0.75em;
+            font-weight: 600;
+            padding-top: 10px;
+            z-index: 10;
+            box-shadow: 0 0 0 4px white;
+            /* Inner white ring */
+        }
+
+        .badge::before {
+            content: '✓';
+            display: block;
+            font-size: 1.8em;
+            margin-top: 0px;
+            line-height: 1;
+        }
+
+        .badge strong {
+            display: block;
+        }
+
+
+        /* Desktop View (Side-by-Side) */
+        @media (min-width: 600px) {
+            .cards-wrapper {
+                flex-direction: row;
+            }
+
+            .card {
+                padding: 25px;
+            }
+
+            .card-alternate .card-content {
+                padding: 25px;
+            }
+        }
+
+        /* Global Setup and Body */
+        .med {
+            font-family: Arial, sans-serif;
+            background-color: #e5f9fd;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            border-radius: 25px 25px 0px 0px;
+        }
+
+        /* Main Container */
+        .main-container {
+            width: 100%;
+            max-width: 750px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+
+        }
+
+        /* Main Header */
+        .main-header {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #4a4a4a;
+            margin-bottom: 25px;
+        }
+
+        /* Card Wrapper (Flexbox for 2-column layout on desktop) */
+        .comparison-wrapper {
+            display: flex;
+            flex-direction: column;
+            /* Stacked on mobile */
+            gap: 20px;
+
+        }
+
+        /* Individual Card Base */
+        .medicine-card {
+            flex: 1;
+            padding: 15px;
+            border: 2px solid #dedcdc;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        /* Left Card - Selected Medicine */
+        .selected-card {
+            /* Default white background and standard border */
+        }
+
+        /* Right Card - Recommended Substitute */
+        .recommended-card {
+            border: 1px solid #00b0f0;
+            /* Blue border */
+            background-color: #f7f7ff;
+            /* Very light blue background */
+            overflow: hidden;
+        }
+
+        /* Card Headers */
+        .card-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Image and Product Info Section */
+        .product-info {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+
+        .product-image {
+            width: 90px;
+            height: 90px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-right: 15px;
+            padding: 5px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+        }
+
+        .details-text {
+            flex-grow: 1;
+            padding-top: 5px;
+        }
+
+        .name {
+            font-size: 1em;
+            font-weight: 700;
+            margin: 0 0 3px 0;
+            color: #333;
+        }
+
+        .manufacturer {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .strip-info {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Pricing Details */
+        .pricing {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 15px;
+        }
+
+        .current-price {
+            font-size: 1.3em;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .price-per-unit {
+            font-size: 0.9em;
+            color: #777;
+            margin-left: 10px;
+            font-weight: 500;
+        }
+
+        .mrp-discount {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        .mrp-discount strong {
+            text-decoration: line-through;
+            font-weight: normal;
+        }
+
+        .discount-percent {
+            color: #2ecc71;
+            /* Green color */
+            font-weight: 700;
+            margin-left: 5px;
+        }
+
+        /* Buttons */
+        .add-to-cart {
+            margin-top: 15px;
+        }
+
+        .add-to-cart button {
+            width: 100%;
+            padding: 10px;
+            font-size: 1.1em;
+            font-weight: 700;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .selected-card .add-to-cart button {
+            background-color: white;
+            color: #00b0f0;
+            border: 1px solid #00b0f0;
+        }
+
+        .selected-card .add-to-cart button:hover {
+            background-color: #f0faff;
+        }
+
+        .recommended-card .add-to-cart button {
+            background-color: #00b0f0;
+            color: white;
+            border: 1px solid #00b0f0;
+        }
+
+        .recommended-card .add-to-cart button:hover {
+            background-color: #008ccf;
+        }
+
+        /* Discount Badge */
+        .discount-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #9c27b0;
+            /* Purple/Magenta color */
+            color: white;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            font-weight: 700;
+            border-radius: 0 8px 0 8px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Footer Message (Users Bought This) */
+        .users-bought-footer {
+            display: flex;
+            align-items: center;
+            background-color: #fff7e6;
+            /* Light yellow background */
+            color: #886000;
+            padding: 8px 10px;
+            margin-top: 15px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .users-bought-footer .icon {
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+
+        /* Composition Section - TARGETED CHANGE HERE */
+        .composition-section {
+            border-top: 1px solid #eee;
+            padding: 20px;
+            /* Added padding to the top and sides */
+            margin-top: 25px;
+            background-color: #F8F8F8;
+            /* Light gray background */
+            border-radius: 8px;
+            /* Added rounded corners */
+            border: 1px solid #eee;
+            /* Added a subtle border */
+        }
+
+        .composition-header {
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: #00b0f0;
+            margin-bottom: 10px;
+        }
+
+        .composition-icon {
+            color: #00b0f0;
+            font-size: 1.5em;
+            margin-right: 8px;
+        }
+
+        .composition-details {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Desktop View */
+        @media (min-width: 768px) {
+            .comparison-wrapper {
+                flex-direction: row;
+                /* Side-by-side on desktop */
+            }
+        }
+
+        /* Content */
+        /* Global Setup and Reset */
+        .content {
+            font-family: Arial, sans-serif;
+            background-color: #d8fcfd;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        /* Outer Container - Mobile Default */
+        .container {
+            width: 100%;
+            max-width: 100%;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            box-sizing: border-box;
+        }
+
+        /* --- 1. Top List Section (Distribution, Metabolism, Excretion) --- */
+        .top-list {
+            display: flex;
+            flex-direction: column;
+            /* Stacked by default (Mobile) */
+            gap: 30px;
+            /* Increased vertical gap */
+            padding-bottom: 10px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .info-icon {
+            width: 60px;
+            /* Larger icons for more visual weight */
+            height: 60px;
+            margin-right: 20px;
+            /* Increased margin */
+            flex-shrink: 0;
+        }
+
+        .info-icon img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .info-text {
+            flex-grow: 1;
+        }
+
+        .info-text strong {
+            display: block;
+            font-size: 1.2em;
+            /* Slightly larger heading */
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3px;
+        }
+
+        .info-text p {
+            font-size: 1em;
+            /* Standard text size for readability */
+            color: #555;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* --- 2. Middle Card Section: "They are the same" --- */
+        .similarity-card {
+            background-color: #F8F8F8;
+            /* Light background */
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            /* Slightly more rounded corners */
+            padding: 30px 25px;
+            /* Increased padding */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            /* More pronounced shadow */
+            margin-top: 40px;
+            /* Increased top margin */
+        }
+
+        .similarity-card h2 {
+            font-size: 1.5em;
+            /* Larger heading */
+            font-weight: 700;
+            color: #333;
+            margin: 0 0 30px 0;
+        }
+
+        /* Highlight "same" */
+        .similarity-card h2 span {
+            color: #000000;
+        }
+
+        .similarity-list .info-item {
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+
+        .similarity-list .info-icon {
+            width: 55px;
+            /* Slightly larger icon */
+            height: 55px;
+        }
+
+        .similarity-list .info-text p {
+            font-size: 1.1em;
+            /* Larger, more readable text within the card */
+            color: #4a4a4a;
+            font-weight: 500;
+        }
+
+        /* --- 3. Bottom Retail Section --- */
+        .retail-section {
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid #ddd;
+            /* Thicker separator */
+        }
+
+        .retail-section h3 {
+            font-size: 1.5em;
+            /* Prominent heading */
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .retail-section h3 span {
+            color: #00b0f0;
+        }
+
+        .retail-section p {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .profit-text {
+            font-size: 3rem;
+            /* Significantly larger profit text */
+            font-weight: 900;
+            line-height: 1.1;
+            margin: 0;
+        }
+
+        .profit-text .low {
+            color: #999;
+        }
+
+        .profit-text .high {
+            color: #000;
+        }
+
+        /* --- Responsive Styles: Desktop (Full Width, Centered Content, 3-Column Top Section) --- */
+        @media (min-width: 1000px) {
+            body {
+                padding: 40px;
+            }
+
+            .container {
+                max-width: 1100px;
+                /* Increased max-width for spacious desktop look */
+                margin: 0 auto;
+                padding: 50px;
+                /* Increased inner padding */
+            }
+
+            .top-list {
+                flex-direction: row;
+                /* Side-by-side */
+                gap: 50px;
+                /* Increased gap between items */
+            }
+
+            .similarity-card {
+                padding: 40px;
+                /* Enhanced internal padding */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-container">
+        <div class="header-section">
+            <h1>Smart Choice, Big Savings</h1>
+            <h2>Why Buy Alternate?</h2>
+            <div class="shield-graphic">
+                <span class="star star-1">⭐</span>
+                <span class="star star-2">⭐</span>
+                <div class="shield-icon">🛡️</div>
+                <span class="star star-3">⭐</span>
+                <span class="star star-4">⭐</span>
+            </div>
+        </div>
+        <div class="content-section">
+            <p class="headline">
+                <strong>Alternate are safe</strong>
+            </p>
+            <p class="body-text">
+                Alternate brand are your best business choice. They are the
+                <span class="highlight">same medicine, same power, same result</span> as the others brand.
+            </p>
+            <p class="call-to-action">
+                This means <span class="highlight">better profits for you</span> and <span class="highlight">big
+                    savings</span> for your customers!
+            </p>
+            <p class="example-link">
+                View <a href="#">example</a>
+            </p>
+        </div>
+
+        <div class="med">
+            <div class="main-container">
+                <div class="main-header">Compare and Choose</div>
+
+                <div class="comparison-wrapper">
+
+                    <div class="medicine-card selected-card">
+                        <div class="card-title">Searched Medicine</div>
+
+                        <div class="product-info">
+                            <div class="product-image">
+                                <img src="img/pan 40.webp"
+                                    alt="Pan 40 Tablet 15">
+                            </div>
+                            <div class="details-text">
+                                <p class="name">Pan 40 Tablet 15</p>
+                                <p class="manufacturer">Alkem Laboratories Ltd.</p>
+                                <p class="strip-info">Strip of 15 Units</p>
+                            </div>
+                        </div>
+
+                        <div class="pricing">
+                            <div class="current-price">
+                                ₹113.79 <span class="price-per-unit">₹7.58/Units</span>
+                            </div>
+                            <p class="mrp-discount">
+                                MRP <strong>₹159.38</strong> <span class="discount-percent">28.6% OFF</span>
+                            </p>
+                        </div>
+
+                        <div class="add-to-cart">
+                            <a href="https://play.google.com/store/apps/details?id=com.healthcrad.wholesale"><button>Add To Cart</button></a>
+                        </div>
+                    </div>
+
+                    <div class="medicine-card recommended-card">
+                        <div class="discount-badge">35% CHEAPER</div>
+                        <div class="card-title">Recommended Alternate</div>
+
+                        <div class="product-info">
+                            <div class="product-image">
+                                <img src="img/pantop 40.webp"
+                                    alt="Pantop 40 Tablet 15">
+                            </div>
+                            <div class="details-text">
+                                <p class="name">Pantop 40 Tablet 15</p>
+                                <p class="manufacturer">Aristo Pharmaceuticals Pvt. Ltd.</p>
+                                <p class="strip-info">Strip of 15 unit</p>
+                            </div>
+                        </div>
+
+                        <div class="pricing">
+                            <div class="current-price">
+                                ₹103.59 <span class="price-per-unit">₹6.90/Units</span>
+                            </div>
+                            <p class="mrp-discount">
+                                MRP <strong>₹159.38</strong>
+                            </p>
+                        </div>
+
+                        <div class="add-to-cart">
+                            <a href="https://play.google.com/store/apps/details?id=com.healthcrad.wholesale"><button>Add To Cart</button></a>
+                        </div>
+
+                        <div class="users-bought-footer">
+                            <span class="icon">🧑‍🤝‍🧑</span>
+                            Many users bought this instead
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="composition-section">
+                    <div class="composition-header">
+                        <span class="composition-icon">🧪</span>
+                        Both have the same composition
+                    </div>
+                    <p class="composition-details">
+                       Pantoprazole (40 Mg)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+
+            <div class="container">
+                <div class="top-list">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="img/Distribution.png"
+                                alt="Distribution Icon">
+                        </div>
+                        <div class="info-text">
+                            <strong>Distribution</strong>
+                            <p>The medicine spreads in the blood to reach the sick part of the body.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="img/Metabolism.png" alt="Metabolism Icon">
+                        </div>
+                        <div class="info-text">
+                            <strong>Metabolism</strong>
+                            <p>The body breaks down the medicine in the right way to do its work.</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <img src="img/Excretion.png" alt="Excretion Icon">
+                        </div>
+                        <div class="info-text">
+                            <strong>Excretion</strong>
+                            <p>The used medicine leaves the body completely and safely.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="similarity-card">
+                    <h2>They are the <span style="color:#000;">same</span> as your medicine</h2>
+
+                    <div class="similarity-list">
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="img/Composition.png"
+                                    alt="Composition Icon">
+                            </div>
+                            <div class="info-text">
+                                <p>They have the exact same composition or salt that cures the patient. The core
+                                    medicine is identical.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="img/Med.png" alt="Dose Icon">
+                            </div>
+                            <div class="info-text">
+                                <p>They have the same amount of medicine in each tablet, capsule, or syrup.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="img/Metabolism.png"
+                                    alt="Result Icon">
+                            </div>
+                            <div class="info-text">
+                                <p>They work in the body to give the same result and cure the same disease.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="retail-section">
+                    <h3>Smart Retail with <span style="color:#00b0f0;">Smart Margin</span></h3>
+                    <p>Because alternate are smarter choice, you get a bigger profit margin on every sale compared to
+                        others.</p>
+
+                    <p class="profit-text">
+                        <span class="low">Low price for customer,</span><br>
+                        <span class="high">high profit for you</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

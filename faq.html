@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="img/HealthCRAD-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="/output.css">
+    <title>HealthCRAD Wholesale | FAQ</title>
+    <style>
+        :root {
+            --primary: #13C7EB;
+            --bg: #f0f4f8;
+            --text-dark: #222;
+            --text-light: #555;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--bg);
+            margin: 0;
+            padding: 2rem;
+            color: var(--text-dark);
+        }
+
+        .faq-section {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .faq-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: black;
+        }
+
+        .faq-card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .faq-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .faq-answer.open {
+            opacity: 1;
+            padding-top: 0.5rem;
+        }
+
+        @media (max-width: 700px) {
+            .faq-card {
+                padding: 1.2rem 1.5rem;
+            }
+
+            .faq-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="faq-section">
+        <h2 class="faq-title font-bold">Frequently Asked <span class="text-[#13C7EB]">Questions ?</span></h2>
+
+        <!-- FAQ Card 1 -->
+        <div class="faq-card">
+            <button class="faq-question">
+                1. Profile & account setup ?
+                <span class="faq-icon">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+                <h3 class="font-bold">(a) How do I create my retailer profile?</h3>
+                <p><span class="text-black">=> After signing up, go to the Profile section and click the edit (pen)
+                        icon:</span> <br>
+                <div class="mt-3"><span class="text-[#13C7EB] font-medium">• Step 1</span> : Basic information (Name,
+                    Email, Phone Number) is pre-filled. <br>
+                    <span class="text-[#13C7EB] font-medium">• Step 2</span> : Personal details (Date of Birth, Gender)
+                    are pre-filled. <br>
+                    <span class="text-[#13C7EB] font-medium">• Step 3</span> : Add your personal address (Do not add
+                    your pharmacy address here).
+                </div>
+                </p>
+                <p class="text-black font-semibold mt-3">* Now, update your <span class="text-[#13C7EB]">Pharmacy
+                        Details:</span></p>
+                <p class="mt-2">
+                    <span class="text-[#13C7EB] font-medium">• Step 1</span> : Enter Pharmacy Name, Phone Number, and
+                    select Buyer Type (Pharmacy or Hospital Pharmacy). <br>
+                    <span class="text-[#13C7EB] font-medium">• Step 1</span> : Upload a valid Drug License (PNG, JPEG,
+                    PDF format) and enter your Drug License Number. <br>
+                    <span class="text-[#13C7EB] font-medium">• Step 1</span> : Enter your GST Number (if available,
+                    optional). <br>
+                    <span class="text-[#13C7EB] font-medium">• Step 1</span> : Provide your Pharmacy Address correctly.
+                    <br>
+
+                </p>
+
+                <p class="mt-2 font-semibold">🔹 <span class="text-black">Verification Time:</span> Your profile will
+                    be verified within 24 to 48 hours.</p>
+
+                <div>
+                    <p class="mt-2 font-bold text-black">
+                        (b) What if my documents get rejected?
+                    </p>
+                    <p class="mt-1">
+                        <span class="text-green-700">✔</span> Ensure your uploaded Drug License is valid and clearly
+                        visible. <br>
+                        <span class="text-green-700">✔</span> Re-upload the correct document in high quality. <br>
+                        <span class="text-green-700">✔</span> If issues persist, contact Customer Support for
+                        assistance. <br>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Card 2 -->
+        <div class="faq-card">
+            <button class="faq-question">
+                2. Ordering & payments ?
+                <span class="faq-icon">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+                <p class="font-bold">(a) How do I order medicines and other products?</p>
+                <div class="mt-3"><span class="text-[#13C7EB] font-medium">👉 </span> Search for products and Add to
+                    Cart. <br>
+                    <span class="text-[#13C7EB] font-medium">👉 </span> Go to the Cart, enter/select the delivery
+                    address, and choose a payment method. <br>
+                    <span class="text-[#13C7EB] font-medium">👉 </span> Click Confirm Order.
+                </div>
+                <p class=" font-bold mt-3">(b) What are the available payment options?<span
+                        class="text-[#13C7EB]"></span></p>
+                <p class="mt-2">
+                    <span class="text-[#13C7EB] font-medium">• Full Payment :</span> Pay the full order amount at the
+                    time of ordering. <br>
+                    <span class="text-[#13C7EB] font-medium">• Partial Payment (50%) :</span> Pay 50% now, and the
+                    remaining 50% at delivery. <br>
+                    <span class="text-[#13C7EB] font-medium">• Pay Later :</span> Your order amount is billed next
+                    month. <br>
+                    <span class="text-[#13C7EB] font-medium">• EMI (Equated Monthly Installments) :</span> Pay in easy
+                    installments through <span class="text-green-600">Credit/Debit Cards or P2P financing.</span> <br>
+                <p class="mt-2 text-black font-bold">💡 HealthCRAD Wholesale is India’s first B2B bulk medicine purchase
+                    marketplace to offer EMI options for medicine purchases.</p>
+                </p>
+
+                <p class="font-bold mt-3">(c) What is Bulk Order?</p>
+                <div>
+                    <p>
+                        📝 Bulk Order Made Simple
+                        → Click “Bulk Order” feature on app <br>
+                        * Upload handwritten order or typed JPG, PDF, Excel, CSV files <br>
+                        * Get extra discounts on bulk orders <br>
+                        * A dedicated manager exclusively for bulk order retailers
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold mt-3">(d) How can I check my order status?</p>
+
+                    <p class="mt-2">
+                        👉 Click on Orders in the bottom menu. <br>
+                        👉 Or go to Profile <span class="text-[#13C7EB] font-semibold">></span> My Orders, then select
+                        an order to view details and status.
+
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold mt-3">(e) How can I cancel my order?</p>
+                    <p class="mt-2">
+                        <span class="text-[#13C7EB] font-semibold">• Before shipping:</span> Contact Customer Support to
+                        cancel without charges. <br>
+                        <span class="text-[#13C7EB] font-semibold">• After shipping:</span> Cancellation charges may
+                        apply (Refer to Terms & Conditions).
+
+                    </p>
+                </div>
+
+                <div>
+                    <p class="font-bold mt-3">(f) Can I modify my submitted details?</p>
+                    <p>
+                        👉 You cannot modify details after submission (profile & pharmacy). If needed, contact <span
+                            class="text-[#13C7EB] font-semibold">Customer Support</span>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Card 3 -->
+        <div class="faq-card">
+            <button class="faq-question">
+                3. CRAD Cash ?
+                <span class="faq-icon">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+                <p class="font-bold text-gray-500 mt-3">(a) What is CRAD Cash?</p>
+                <p class="mt-1">
+                    👉 CRAD Cash is <span class="text-[#13C7EB] font-semibold">virtual money</span> earned as rewards on
+                    every order.
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(b) How can I use CRAD Cash?</p>
+                <p class="mt-1">
+                    👉 CRAD Cash can be used to <span class="text-[#13C7EB] font-semibold">reduce the order
+                        amount</span> at checkout.
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(c) How can I check my CRAD Cash balance?</p>
+                <p class="mt-1">
+                    👉 You can view it in the <span class="text-[#13C7EB] font-semibold">CRAD Cash</span> section in
+                    your profile.
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(d) Can I transfer CRAD Cash to my bank or another user?</p>
+                <p class="mt-1">
+                    👉 No, CRAD Cash <span class="text-[#13C7EB] font-semibold">cannot be transferred</span> to your
+                    bank account or other users.
+                </p>
+
+            </div>
+        </div>
+
+
+        <!-- FAQ Card 4 -->
+        <div class="faq-card">
+            <button class="faq-question">
+                4. Star Retailer Program ?
+                <span class="faq-icon">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+                <p class="font-bold text-gray-500 mt-3">(a) What is the Star Retailer Program?</p>
+                <p class="mt-1">
+                    👉 The Star Retailer Program rewards retailers with<span class="text-[#13C7EB] font-semibold"> extra
+                        income & cashback</span> on every order.
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(b) How do I become a Star Retailer?</p>
+                <p class="mt-1">
+                    👉 Meet the ₹10,000 target → enrolled automatically <br>
+                    👉Once qualified, your ‘My Earnings’ page will be activated to track and analyze your growth and
+                    earnings
+
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(c) What are the conditions to remain a Star Retailer?</p>
+                <p class="mt-1">
+                    👉 No forms, no extra steps! <br>
+                    👉 If you fall short, you’ll be removed after 1 year from last qualifying date
+
+                </p>
+
+                <p class="font-bold text-gray-500 mt-3">(d) What are the benefits of being a Star Retailer?</p>
+                <p class="mt-1">
+                    • <span class="text-[#13C7EB] font-semibold">Assured extra earning, cashback & rewards </span>
+                    (Withdraw your earning directly to your bank account once redeemable limit is reached). <br>
+                    • <span class="text-[#13C7EB] font-semibold">Additional discounts </span> on future orders.
+
+                </p>
+
+                <a href="starretailerbenefits.html">Know more →</a>
+            </div>
+        </div>
+
+
+        <!-- FAQ Card 4 -->
+        <div class="faq-card">
+            <button class="faq-question">
+                5. Support & Assistance ?
+                <span class="faq-icon">&#9660;</span>
+            </button>
+            <div class="faq-answer">
+                <p class="font-bold text-gray-500 mt-3">What if I face issues with my orders, profile, or payments?</p>
+                <p class="mt-1">
+                    👉 Visit <span class="text-[#13C7EB] font-semibold">Help & Support</span> in the app. <br>
+                    👉<span class="text-[#13C7EB] font-semibold">Email at: </span>support@healthcrad.com
+                </p>
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        const cards = document.querySelectorAll('.faq-card');
+
+        cards.forEach(card => {
+            const btn = card.querySelector('.faq-question');
+            const answer = card.querySelector('.faq-answer');
+            const icon = card.querySelector('.faq-icon');
+
+            btn.addEventListener('click', () => {
+                const isOpen = answer.classList.contains('open');
+
+                if (isOpen) {
+                    answer.style.maxHeight = null;
+                    answer.classList.remove('open');
+                    icon.classList.remove('rotate');
+                } else {
+                    // Close all others
+                    document.querySelectorAll('.faq-answer').forEach(a => {
+                        a.style.maxHeight = null;
+                        a.classList.remove('open');
+                    });
+                    document.querySelectorAll('.faq-icon').forEach(i => {
+                        i.classList.remove('rotate');
+                    });
+
+                    answer.classList.add('open');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    icon.classList.add('rotate');
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAD Cash alert</title>
+    
+    <style>
+        /* General body styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Styles for the main content that will be blurred */
+        .main-content {
+            padding: 2rem;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Class to apply the blur effect to the body */
+        body.blur-background {
+            filter: blur(5px);
+            pointer-events: none; /* Disables clicks on the blurred content */
+            transition: filter 0.3s ease-in-out;
+        }
+
+        /* The modal (popup) container */
+        .modal-overlay {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay on top */
+            z-index: 100; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+        }
+        
+        .modal-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* Centers the box */
+            width: 90%;
+            max-width: 400px;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* The "Back" button */
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+
+        .back-btn:hover {
+            background-color: #5a6268;
+        }
+
+        .modal-title {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.5rem;
+        }
+
+        .modal-paragraph {
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        /* Animation for the popup */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-content">
+        <h1>CRAD Cash</h1>
+        <p>CRAD Cash will be credited to your account after each successful order.</p>
+        <!-- <button onclick="openPopup()">Open Popup</button> -->
+    </div>
+
+    <div id="popup-overlay" class="modal-overlay">
+        <div class="modal-box">
+            <h2 class="modal-title">Popup Title</h2>
+            <p class="modal-paragraph">Crad Cash will be credited to your account after each successful order.</p>
+            <button class="back-btn" onclick="closePopup()">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup-overlay').style.display = 'block';
+            document.body.classList.add('blur-background');
+        }
+
+        function closePopup() {
+            document.getElementById('popup-overlay').style.display = 'none';
+            document.body.classList.remove('blur-background');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/HealthCRAD-Logo.png" type="image/x-icon">
+    <title>HealthCRAD Sehat Saathi Kendra</title>
+    <link rel="stylesheet" href="output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 70px 20px;
+            background: linear-gradient(135deg, #ffffff, #66e0ff);
+            color: #000;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .header p {
+            font-size: 14px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .content-box {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 30%;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .content-box:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .content-box img {
+            width: 80px;
+            margin-bottom: 20px;
+        }
+
+        .content-box i {
+            font-size: 50px;
+            color: #0dace7;
+            margin-bottom: 20px;
+        }
+
+        .content-box h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .content-box p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        /* Service Details Section */
+        .service-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 70px;
+        }
+
+        .service-item {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 48%;
+            text-align: left;
+            padding: 30px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-item img {
+            width: 50%;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .service-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .service-item h3 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .service-item p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        /* Team Section */
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            width: 220px;
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-member img {
+            width: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+
+        .team-member h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #f7f9fc, #e8f5f8);
+            padding: 50px 20px;
+            border-radius: 12px;
+            
+        }
+
+        .testimonials h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .testimonial-item {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .testimonial-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .testimonial-item p {
+            font-size: 16px;
+            color: #777;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-item h3 {
+            font-size: 18px;
+            color: #0dace7;
+            font-weight: 600;
+        }
+
+        .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #2F52AE;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      z-index: 999;
+    }
+
+    .bounce-icon {
+      animation: bounce 1.2s infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+        /* Call to Action */
+        .cta-btn {
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .cta-btn a {
+            background: #0dace7;
+            color: white;
+            padding: 8px 30px;
+            font-size: 14px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-btn a:hover {
+            background: #00b8e6;
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-box {
+                width: 48%;
+            }
+
+            .service-item {
+                width: 100%;
+            }
+
+            .team-member {
+                width: 48%;
+            }
+
+            .testimonial-item {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-box {
+                width: 100%;
+            }
+
+            .team-member {
+                width: 100%;
+            }
+
+            .testimonial-item {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1 class="md:" ><span class="hidden md:block">🌿</span> Become a Sehat Saathi Kendra</h1>
+        <p>Upgrade your store from just a medicine counter to a complete healthcare access point — equipped with modern tools, tech, mobile app, medicine inventory, and real-time digital connectivity.
+            Offer your community all essential healthcare services — easily, affordably, and with trust.</p>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="main-content">
+            <div class="content-box">
+                <h3>Wholesale Discounts</h3>
+                <p>Get branded & generic medicines at unbeatable wholesale rates. </p>
+                <i class="fa-solid fa-percentage"></i>
+            </div>
+            <div class="content-box">
+                <h3>Flexible Payments</h3>
+                <p>Choose from EMI, Half-EMI, Pay on Delivery, or Full Payment options.</p>
+                <i class="fa-solid fa-hands-helping"></i>
+            </div>
+            <div class="content-box">
+                <h3>Doctor on Call</h3>
+                <p>Provide teleconsultations with top doctors across India.</p>
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <div class="content-box">
+                <h3>Lab Test Support</h3>
+                <p>Enable path lab services at your centre.</p>
+                <i class="fa-solid fa-thermometer"></i>
+            </div>
+            <div class="content-box">
+                <h3>Emergency Help</h3>
+                <p>Connect patients with fast ambulance services when they need it most.</p>
+                <i class="fa-solid fa-ambulance"></i>
+            </div>
+            <div class="content-box">
+                <h3>Home Delivery</h3>
+                <p>Offer doorstep delivery to your patients.</p>
+                <i class="fa-solid fa-box"></i>
+            </div>
+            <div class="content-box">
+                <h3>AI Health Kiosk</h3>
+                <p>Install smart kiosks for instant health checks & live doctor consults.</p>
+                <i class="fa-solid fa-hospital"></i>
+            </div>
+            <div class="content-box">
+                <h3> Patient App Access</h3>
+                <p>Let patients book consultations and services easily through a mobile app.</p>
+                <i class="fa-solid fa-mobile"></i>
+            </div>
+            <div class="content-box">
+                <h3> Fast & Verified Supply</h3>
+                <p>Procure directly from trusted suppliers with transparent inventory and fast delivery.</p>
+                <i class="fa-solid fa-check"></i>
+            </div>
+        </div>
+
+        <!-- Service Details Section -->
+        <div class="service-details">
+            <div class="service-item">
+                <img src="img/Apply.jpeg" alt="Health Programs">
+                <h3> Who Can Apply?</h3>
+                <p>✅  Licensed medicine stores in rural or semi-urban areas. <br>
+                    ✅  Entrepreneurs looking to expand service offerings beyond just medicine sales. <br>
+                    ✅  Pharmacies wishing to offer doctor consultations, lab tests, ambulance, AI kiosks & more. <br>
+                    ✅  Anyone who wants to increase profits and improve healthcare access in their community.</p>
+            </div>
+            <div class="service-item">
+                <img src="img/Join.jpeg" class="mt-4" alt="Consultations">
+                <h3 class="mt-14">Why Join Us ?</h3>
+                <p>Your Rural Pharmacy, Now Smarter, Stronger & Profitable. Get personalized health consultations from certified doctors and specialists. Whether it's a general check-up or a specialized consultation, we're here to help.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+         <h1 class="text-center text-4xl font-semibold py-12">What our partners say ?</h1>
+        <div class="team-section">
+
+            <div class="team-member">
+                
+                <p>Earlier I was just a chemist, now I run a full health center!
+                </p>
+                <h3 class="mt-4 ">~ Vikash Medical Store</h3>
+            </div>
+            <div class="team-member">
+                
+                <p>Medicine on EMI helped me stock more, stress-free!
+                </p>
+                <h3 class="mt-4 ">~ Amrit Medical Hall</h3>
+            </div>
+            <div class="team-member">
+                
+                <p>Now my village doesn't have to travel miles for a doctor!</p>
+                <h3 class="mt-4 ">~ Puja Medicine Center</h3>
+            </div>
+            <div class="team-member">
+                
+                <p>My monthly earnings doubled after becoming a Sehat Saathi Kendra.</p>
+                <h3 class="mt-4 ">~ Faizal Medical Hall</h3>
+            </div>
+            <div class="team-member">
+                
+                <p>
+                    People trust me more—thanks to HealthCRAD’s digital platform!
+                    </p>
+                    <h3 class="mt-4">~ Tesu Medicine Center</h3>
+            </div>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div class="testimonials">
+           <div class="flex flex-col md:flex-row"> <div class="testimonial-item">
+            <h3>🏆 Be the Health Hero
+            </h3>
+                <p> 💡 HealthCRAD is helping build the future of rural healthcare — one Sehat Saathi Kendra at a time. <br>
+                    💡 Lead the change in your community. <br>
+                    💡 Transform your store into your area's first digitally advanced health center. Earn respect, revenue, and recognition - all in one place</p>
+                
+            </div>
+        </div>
+
+        <!-- Call to Action -->
+        <div class="cta-btn ">
+            <a href="https://play.google.com/store/apps/details?id=com.healthcrad.wholesale">Join Sehat Saathi Kendra</a>
+        </div>
+    </div>
+
+     <!-- WhatsApp Button -->
+  <a href="https://wa.me/917779888289" class="whatsapp-float bounce-icon"
+  target="_blank">
+  💬 Enquiry Now
+</a>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
